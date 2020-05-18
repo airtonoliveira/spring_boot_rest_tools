@@ -3,23 +3,28 @@ package com.alco.restapp.user;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 
 //@ApiModel(description="All details about the user.")
 @Entity
 public class User {
 
-	//@Id
-	//@GeneratedValue
+	@Id
+	@GeneratedValue
 	private Integer id;
 
-	//@Size(min=2, message="Name should have atleast 2 characters")
+	@Size(min=2, message="Name should have atleast 2 characters")
 	//@ApiModelProperty(notes="Name should have atleast 2 characters")
 	private String name;
 
-	//@Past
+	@Past
 	//@ApiModelProperty(notes="Birth date should be in the past")
 	private Date birthDate;
 
+	//not need in recent spring boot and jackson versions
 	protected User() {
 
 	}
