@@ -1,1 +1,6 @@
-# spring_boot_rest
+# Spring Boot - RESTful API
+
+Bean Validation
+Generic Exception Handling (@ControllerAdvice)
+HATEOAS
+Internationalization
